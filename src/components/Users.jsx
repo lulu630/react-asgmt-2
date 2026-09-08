@@ -10,6 +10,9 @@ const mockData = [
 
 function Users() {
     const [users, setUsers] = useState(mockData)
+    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
+
 
     return (
     <section>
@@ -22,6 +25,22 @@ function Users() {
                 </li>
                 ))}
         </ul>
+
+        <form action="">
+            <label htmlFor="">Username
+                <input type="text" value={username} onChange={(event) => setUsername(event.target.value)}/>
+            </label>
+
+            <label htmlFor="">Email
+                <input type="email" value={email} onChange={(event) => setEmail(event.target.value1)} />
+            </label>
+            
+            <button type='submit'>
+                Add user
+            </button>
+
+
+        </form>
     </section>
     )}
 
