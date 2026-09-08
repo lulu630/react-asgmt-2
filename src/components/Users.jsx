@@ -13,7 +13,21 @@ function Users() {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
 
+    function handleSubmit(event) {
+        event.preventDefault()
 
+        const newUser = {
+            username: username,
+            email: email,
+        }
+
+         setUsers([...users, newUser])
+         setUsername("")
+         setEmail("")
+
+    }
+
+   
     return (
     <section>
         <h2>Users</h2>
@@ -26,14 +40,25 @@ function Users() {
                 ))}
         </ul>
 
-        <form action="">
-            <label htmlFor="">Username
-                <input type="text" value={username} onChange={(event) => setUsername(event.target.value)}/>
+        <form onSubmit={handleSubmit}>
+            <label>Username
+                <input 
+                type='text'
+                placeholder='John Doe'
+                value={username} 
+                onChange={(event) => setUsername(event.target.value)} 
+                required/>
             </label>
 
-            <label htmlFor="">Email
-                <input type="email" value={email} onChange={(event) => setEmail(event.target.value1)} />
+            <label>Email
+                <input 
+                type='email' 
+                placeholder='johndoe@email.com'
+                value={email} 
+                onChange={(event) => setEmail(event.target.value)} 
+                required/>
             </label>
+            
             
             <button type='submit'>
                 Add user
