@@ -27,14 +27,13 @@ function Users() {
 
     }
 
-   
     return (
-    <section>
+    <section className='user-section'>
         <h2>Users</h2>
-        <ul>
+        <ul className='user-list'>
             {users.map((user) => (
-                <li>
-                    {user.username} - 
+                <li key={user.email}>
+                    {user.username} 
                     {user.email}
                 </li>
                 ))}
@@ -58,7 +57,7 @@ function Users() {
                 onChange={(event) => setEmail(event.target.value)} 
                 required/>
             </label>
-            
+
             
             <button type='submit'>
                 Add user

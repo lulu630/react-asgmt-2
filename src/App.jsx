@@ -3,15 +3,19 @@ import CatFacts from './components/CatFacts'
 import CookieClicker from './components/CookieClicker'
 import './App.css'
 
+
 function App() {
   return (
     <main>
-      <h1>React Hooks Assignment</h1>
+      <h1>React Hooks Assignment 🪝</h1>
       <CookieClicker />
       <CatFacts />
       <Users />
     </main>
   )
 }
+
+
+
 
 export default App

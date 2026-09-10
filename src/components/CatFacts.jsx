@@ -32,19 +32,29 @@ function CatFacts() {
 
 
     return (
-        <section>
+        <section className='cat-section'>
             <h2>Cat Facts</h2>
             {loading && <p>Loading...</p> }
             {error && <p>Error: {error}</p>}
             
-
-            <ul>
+            <ol className="facts-list">
                 {facts.map((item) => (
-                    <li kery={item.fact}>
+                    <li key={item.fact} className="cat-fact">
                         {item.fact}
                     </li>
                 ))}
-            </ul>
+            </ol>
+            
+            <div className="cat">
+                <img
+                src="/cat.png"
+                alt=""
+                aria-hidden="true"
+                />
+            </div>
+
+
+           
         </section>
     )
     
