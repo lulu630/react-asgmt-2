@@ -7,7 +7,6 @@ import './App.css'
 function App() {
   return (
     <main>
-      <h1>React Hooks Assignment 🪝</h1>
       <CookieClicker />
       <CatFacts />
       <Users />

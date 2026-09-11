@@ -7,7 +7,7 @@ function CookieClicker() {
             <h2>Cookie Monster</h2>
             <h3>Total Bites: {points}</h3>
             <button 
-            className="cookie-button"
+            className="cookie-btn"
             type="button"
             onClick={ () => setPoints(points + 1)}
             >

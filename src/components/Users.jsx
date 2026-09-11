@@ -32,9 +32,16 @@ function Users() {
         <h2>Users</h2>
         <ul className='user-list'>
             {users.map((user) => (
-                <li key={user.email}>
-                    {user.username} 
-                    {user.email}
+                <li className="user-card" key={user.email}>
+                <div className="user-avatar" aria-hidden="true">
+                    {user.username.trim().charAt(0).toUpperCase()}
+                </div>
+                <div className="user-info">
+                    <h3>{user.username}</h3>
+                    <a href={`mailto:${user.email}`}>
+                        {user.email}
+                    </a>
+                </div>
                 </li>
                 ))}
         </ul>
@@ -59,14 +66,12 @@ function Users() {
             </label>
 
             
-            <button type='submit'>
-                Add user
+            <button className='users-btn' type='submit'>
+                Add User
             </button>
-
 
         </form>
     </section>
     )}
 
 export default Users
-
