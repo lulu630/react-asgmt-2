@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import catImg from '../assets/images/cat.png'
 
 
 function CatFacts() {
@@ -47,7 +48,7 @@ function CatFacts() {
             
             <div className="cat">
                 <img
-                src="/cat.png"
+                src={catImg}
                 alt=""
                 aria-hidden="true"
                 />
@@ -61,4 +62,3 @@ function CatFacts() {
 }
 
 export default CatFacts
-

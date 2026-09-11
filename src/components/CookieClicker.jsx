@@ -1,4 +1,6 @@
 import { useState} from 'react'
+import cookieImg from '../assets/images/cookie.png'
+import cookieMonsterImg from '../assets/images/cookie-monster.png'
 
 function CookieClicker() {
     const [points, setPoints] = useState(0)
@@ -11,11 +13,11 @@ function CookieClicker() {
             type="button"
             onClick={ () => setPoints(points + 1)}
             >
-                <img src="/cookie.png" alt="Cookie" />
+                <img src={cookieImg} alt="Cookie" />
             </button>
             <img 
                 className="cookie-monster" 
-                src="/cookie-monster.png"
+                src={cookieMonsterImg}
                 alt=""
                 aria-hidden="true"
             />
