@@ -53,9 +53,6 @@ function CatFacts() {
                 aria-hidden="true"
                 />
             </div>
-
-
-           
         </section>
     )
     
